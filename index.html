@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="in">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Streaming TV Indo 24 jam</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="../icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../icon/favicon-16x16.png">
+    <link rel="manifest" href="../icon/site.webmanifest">
+    <!-- Hubungkan file CSS eksternal -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="navbar-title">Live TV 24 Jam</div>
+        <!-- Image "brain" untuk memunculkan popup -->
+        <img src="../icon/brain.png" onclick="togglePopup()" style="cursor: pointer;">
+    </div>
+    <br>
+    <!-- Konten utama -->
+    <div class="container">
+        <!-- Iframe untuk video streaming -->
+        <div class="iframe-container">
+            <iframe id="myIframe" src="https://www.youtube.com/embed/XKueVSGTk2o?si=in6aa8UVB0mGTJC7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <!-- Deskripsi dan tombol untuk memilih channel -->
+        <h4>📺 Ganti resolusi jika vidio buffering <br>  ❗Beberapa server mungkin bermasalah <br> 🫵🏻Tekan tombol untuk memilih Channel yang ingin ditonton</h4>
+        <button class="btn" onclick="changeIframe('https://www.youtube.com/embed/XKueVSGTk2o?si=in6aa8UVB0mGTJC7')">Metro TV</button>
+        <button class="btn" onclick="changeIframe('https://www.youtube.com/embed/yNKvkPJl-tg?si=IKURnb15ZBKFjFtx')">TV One</button>
+        <button class="btn" onclick="changeIframe('https://www.youtube.com/embed/DOOrIxw5xOw?si=VTjqjb_0nxDP_bqW')">Kompas TV</button>
+        <button class="btn" onclick="changeIframe('https://20.detik.com/watch/livestreaming-transtv')">Trans TV</button>
+        <button class="btn" onclick="changeIframe('https://20.detik.com/watch/livestreaming-trans7')">Trans 7</button>
+        <button class="btn" onclick="changeIframe('https://sindikasi.inews.id/embed/video/YWdlbnQ9ZGVza3RvcCZ1cmw9aHR0cHMlM0ElMkYlMkZlbWJlZC5yY3RpcGx1cy5jb20lMkZsaXZlJTJGcmN0aSUyRmluZXdzaWQmaGVpZ2h0PTEwMCUyNSZ3aWR0aD0xMDAlMjU=')">RCTI</button>
+        <button class="btn" onclick="changeIframe('https://sindikasi.inews.id/embed/video/YWdlbnQ9ZGVza3RvcCZ1cmw9aHR0cHMlM0ElMkYlMkZlbWJlZC5yY3RpcGx1cy5jb20lMkZsaXZlJTJGZ3R2JTJGaW5ld3NpZCZoZWlnaHQ9MTAwJTI1JndpZHRoPTEwMCUyNQ==')">GTV</button>
+        <button class="btn" onclick="changeIframe('https://www.cnnindonesia.com/tv/embed?ref=transmedia')">CNN Indonesia</button>
+        <button class="btn" onclick="changeIframe('https://www.cnbcindonesia.com/embed/tv?ref=transmedia')">CNBC Indonesia</button>
+        <button class="btn" onclick="changeIframe('https://www.youtube.com/embed/ORTqlnTUO7Q?si=zCwi-ye9eg60X5PX')">INews</button>
+        <button class="btn" onclick="changeIframe('https://sindikasi.inews.id/embed/video/YWdlbnQ9ZGVza3RvcCZ1cmw9aHR0cHMlM0ElMkYlMkZlbWJlZC5yY3RpcGx1cy5jb20lMkZsaXZlJTJGbW5jdHYlMkZpbmV3c2lkJmhlaWdodD0xMDAlMjUmd2lkdGg9MTAwJTI1')">MNCTV</button>
+        <!-- Iframe untuk chatbox -->
+        <div class="chatbox-wrapper">
+            <iframe src="https://www5.cbox.ws/box/?boxid=951791&boxtag=apITuM" allowtransparency="yes" allow="autoplay" frameborder="0" scrolling="auto"></iframe>
+        </div>
+        <!-- Informasi tambahan -->
+        <h3>🗣️ Gunakan kata yang sopan jika ingin berkomentar</h3>
+        <h3>📺 Streaming online TV 24 jam</h3>
+        <h3>🐞 Beberapa bug mungkin masih ada</h3>
+        <h3>💚 Web masih dalam tahap pengembangan</h3>
+    </div>
+    
+    <!-- Marquee untuk kredit dan versi -->
+    <div class="marquee-container">
+        <marquee scrollamount="20"><nobr>Made with ♥️ by 0Logic - Streaming TV Indo 24 Jam - Versi 0.6 | <span id="clock"></span></nobr></marquee>
+    </div>
+    
+    <!-- Popup untuk riwayat pembaruan -->
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <span class="close" onclick="togglePopup()">&times;</span>
+            <h2>Riwayat Pembaruan</h2>
+            <ul>
+                <li>0.1 Penambahan Channel (Metro TV, TV One, Kompas TV)</li>
+                <li>0.2 Perbaikan UI</li>
+                <li>0.3 Penambahan Channel (Trans TV, Trans 7, Rcti, GTV, CNN, CNBC, Inews)</li>
+                <li>0.4 Penambahan fitur ChatBox</li>
+                <li>0.5 Perbaikan UI (Versi Final untuk saat ini)</li>
+                <li>0.6 Penambahan Channel (MNCTV)</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
